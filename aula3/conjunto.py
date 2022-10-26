@@ -6,15 +6,16 @@ mas sem elementos duplicados.
 """
 
 # criando um conjunto
-
+conj = {1, 2, 3, 4, 5}
 
 
 # verificando o tipo
+type(conj)
 
 
 
 # criando um conjunto misto
-
+misto = {1, 2, 3, 3.1415, 'a', (1, 2, 3), [1, 2, 3]}
 
 
 # acessando elementos do conjunto (slice / slicing)
@@ -25,66 +26,44 @@ mas sem elementos duplicados.
 
 ## realizando a instrospecção do objeto set, observamos que não possui o método __getitem__, logo não temos acesso
 ## ao slice do objeto
-
+dir(conj)
 
 
 # conjuntos são mutáveis
 ## podemos adicionar e remover elementos
 
 ## método add
-
+conj.add(6)
 
 ## método remove
-
+conj.remove(6)
 
 
 # conjuntos são iteráveis
-
+for i in conj:
+    print(i)
 
 
 # conjuntos remove duplicados
-
-
+lista = [1, 2, 3, 4, 3, 5, 6, 2, 6, 7, 8, 1, 9, 10]
+set(lista)
 
 # Operações de conjunto
-
+conjA = {1, 2, 3, 4, 5}
+conjB = {1, 3, 5, 7, 9}
 
 
 ## interseção
-
+conjA.intersection(conjB)
 
 ## união
-
+conjA + conjB
 
 ## diferença
-
+conjA - conjB
 
 ## diferença simétrica
-
+conjA.symmetric_difference(conjB)
 
 ## disjunção
-
-
-
-"""
-Exercício:
-
-1. Gere um conjunto com 20 números aleatórios entre 1 e 25
-2. Gere um segundo conjunto com 20 números aleatórios entre 5 e 30
-3. Calcule:
-    3.1. se são conjuntos disjuntos
-    3.2. a interseção
-    3.3. a união
-    3.4. a diferença simétrica
-    
-Para geração dos números aleatórios, utilize a função nativa do python:
-
-    import random
-    random.randint(inicio, fim)
-
-"""
-
-import random
-
-# 1. Gere um conjunto com 20 números aleatórios entre 1 e 25
-# 2. Gere um segundo conjunto com 20 números aleatórios entre 5 e 30
+conjA.isdisjoint(conjB)

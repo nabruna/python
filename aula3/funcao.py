@@ -10,7 +10,15 @@ de código que pode ser chamado sempre que necessário.
 
 
 # criando uma função que calcula média a partir de uma lista
+notas = {
+    'n1': 8.5,
+    'n2': 6.8,
+    'n3': 7.3,
+    'n4': 5.9
+}
 
+def media(n1, n2, n3, n4):
+    return n1 + n2 + n3 + n4 / 4
 
 # criando uma função que calcula a área de um triangulo
 
